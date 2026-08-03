@@ -1,0 +1,187 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Smart Entities Operator",
+                "description": "Choose the type of operator to create.",
+                "menu_options": {
+                    "lights": "Light group (per area / home)",
+                    "covers": "Cover group (per area / home)",
+                    "switches": "Switch group (per area / home)",
+                    "aggregate": "Sensor aggregate (mean, median, min, max…)",
+                    "difference": "Difference between two entities (A − B)",
+                    "derivative": "Time derivative of an entity",
+                    "moving_average": "Moving average of an entity"
+                }
+            },
+            "lights": {
+                "title": "Light group",
+                "description": "One entity per selected area, and/or one global entity for the whole home.",
+                "data": {
+                    "all_areas": "Apply to all areas",
+                    "target_areas": "Select areas",
+                    "create_global": "Also create a global Home entity",
+                    "label_filter": "Filter by label (optional)",
+                    "use_brightness": "Enable brightness control",
+                    "use_color_temp": "Enable color temperature",
+                    "use_rgb_color": "Enable RGB color"
+                }
+            },
+            "covers": {
+                "title": "Cover group",
+                "description": "One entity per selected area, and/or one global entity for the whole home.",
+                "data": {
+                    "all_areas": "Apply to all areas",
+                    "target_areas": "Select areas",
+                    "create_global": "Also create a global Home entity",
+                    "label_filter": "Filter by label (optional)"
+                }
+            },
+            "switches": {
+                "title": "Switch group",
+                "description": "One entity per selected area, and/or one global entity for the whole home.",
+                "data": {
+                    "all_areas": "Apply to all areas",
+                    "target_areas": "Select areas",
+                    "create_global": "Also create a global Home entity",
+                    "label_filter": "Filter by label (optional)"
+                }
+            },
+            "aggregate": {
+                "title": "Sensor aggregate",
+                "description": "Combines several sensors. Enter keywords (id/name/class) AND/OR pick specific entities. One entity is created per keyword; in specific-entities mode, a single entity (give it a name).",
+                "data": {
+                    "keywords": "Comma-separated keywords (e.g. temperature, humidity)",
+                    "entities": "Specific entities (instead of keywords)",
+                    "name": "Name (specific-entities mode)",
+                    "operation": "Operation",
+                    "label_filter": "Filter by label (optional)",
+                    "precision": "Decimals",
+                    "min_valid": "Minimum accepted value (empty = none)",
+                    "max_valid": "Maximum accepted value (empty = none)",
+                    "outlier_mad": "Outlier rejection — MAD threshold (e.g. 3; empty = off)",
+                    "offsets": "Per-sensor offsets (one line, e.g. sensor.temp_living = -0.5)"
+                }
+            },
+            "difference": {
+                "title": "Difference (A − B)",
+                "description": "Computes the difference between two numeric entities.",
+                "data": {
+                    "name": "Name",
+                    "entity_a": "Entity A",
+                    "entity_b": "Entity B",
+                    "abs_value": "Absolute value |A − B|",
+                    "precision": "Decimals"
+                }
+            },
+            "derivative": {
+                "title": "Time derivative",
+                "description": "Rate of change of an entity per time unit. Smoothing window in seconds (0 = between the two latest points).",
+                "data": {
+                    "name": "Name",
+                    "source": "Source entity",
+                    "unit_time": "Time unit",
+                    "time_window": "Smoothing window (seconds)",
+                    "precision": "Decimals"
+                }
+            },
+            "moving_average": {
+                "title": "Moving average",
+                "description": "Average of an entity over a sliding time window (duration-weighted).",
+                "data": {
+                    "name": "Name",
+                    "source": "Source entity",
+                    "window": "Window (seconds)",
+                    "precision": "Decimals",
+                    "min_valid": "Minimum accepted value (empty = none)",
+                    "max_valid": "Maximum accepted value (empty = none)",
+                    "max_step": "Max accepted jump between two samples (empty = none)"
+                }
+            }
+        },
+        "abort": {
+            "already_configured": "This operator is already configured"
+        }
+    },
+    "options": {
+        "step": {
+            "lights": {
+                "title": "Adjust settings",
+                "data": {
+                    "all_areas": "Apply to all areas",
+                    "target_areas": "Select areas",
+                    "create_global": "Also create a global Home entity",
+                    "label_filter": "Filter by label",
+                    "use_brightness": "Enable brightness control",
+                    "use_color_temp": "Enable color temperature",
+                    "use_rgb_color": "Enable RGB color"
+                }
+            },
+            "covers": {
+                "title": "Adjust settings",
+                "data": {
+                    "all_areas": "Apply to all areas",
+                    "target_areas": "Select areas",
+                    "create_global": "Also create a global Home entity",
+                    "label_filter": "Filter by label"
+                }
+            },
+            "switches": {
+                "title": "Adjust settings",
+                "data": {
+                    "all_areas": "Apply to all areas",
+                    "target_areas": "Select areas",
+                    "create_global": "Also create a global Home entity",
+                    "label_filter": "Filter by label"
+                }
+            },
+            "aggregate": {
+                "title": "Adjust aggregate",
+                "data": {
+                    "keywords": "Keywords (e.g. temperature, humidity)",
+                    "entities": "Specific entities",
+                    "name": "Name (specific-entities mode)",
+                    "operation": "Operation",
+                    "label_filter": "Filter by label",
+                    "precision": "Decimals",
+                    "min_valid": "Minimum accepted value (empty = none)",
+                    "max_valid": "Maximum accepted value (empty = none)",
+                    "outlier_mad": "Outlier rejection — MAD threshold",
+                    "offsets": "Per-sensor offsets"
+                }
+            },
+            "difference": {
+                "title": "Adjust difference",
+                "data": {
+                    "name": "Name",
+                    "entity_a": "Entity A",
+                    "entity_b": "Entity B",
+                    "abs_value": "Absolute value |A − B|",
+                    "precision": "Decimals"
+                }
+            },
+            "derivative": {
+                "title": "Adjust derivative",
+                "data": {
+                    "name": "Name",
+                    "source": "Source entity",
+                    "unit_time": "Time unit",
+                    "time_window": "Smoothing window (seconds)",
+                    "precision": "Decimals"
+                }
+            },
+            "moving_average": {
+                "title": "Adjust moving average",
+                "data": {
+                    "name": "Name",
+                    "source": "Source entity",
+                    "window": "Window (seconds)",
+                    "precision": "Decimals",
+                    "min_valid": "Minimum accepted value (empty = none)",
+                    "max_valid": "Maximum accepted value (empty = none)",
+                    "max_step": "Max accepted jump between two samples (empty = none)"
+                }
+            }
+        }
+    }
+}

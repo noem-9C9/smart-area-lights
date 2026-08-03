@@ -1,0 +1,187 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "Smart Entities Operator",
+                "description": "Choisissez le type d'opérateur à créer.",
+                "menu_options": {
+                    "lights": "Groupe de lumières (par pièce / maison)",
+                    "covers": "Groupe de volets (par pièce / maison)",
+                    "switches": "Groupe de switchs (par pièce / maison)",
+                    "aggregate": "Agrégat de capteurs (moyenne, médiane, min, max…)",
+                    "difference": "Différence entre deux entités (A − B)",
+                    "derivative": "Dérivée temporelle d'une entité",
+                    "moving_average": "Moyenne glissante d'une entité"
+                }
+            },
+            "lights": {
+                "title": "Groupe de lumières",
+                "description": "Une entité par pièce sélectionnée, et/ou une entité globale pour toute la maison.",
+                "data": {
+                    "all_areas": "Appliquer à toutes les pièces",
+                    "target_areas": "Sélectionnez les pièces",
+                    "create_global": "Créer aussi une entité globale Maison",
+                    "label_filter": "Filtrer par étiquette (optionnel)",
+                    "use_brightness": "Activer le contrôle de la luminosité",
+                    "use_color_temp": "Activer la température de couleur",
+                    "use_rgb_color": "Activer la couleur RGB"
+                }
+            },
+            "covers": {
+                "title": "Groupe de volets",
+                "description": "Une entité par pièce sélectionnée, et/ou une entité globale pour toute la maison.",
+                "data": {
+                    "all_areas": "Appliquer à toutes les pièces",
+                    "target_areas": "Sélectionnez les pièces",
+                    "create_global": "Créer aussi une entité globale Maison",
+                    "label_filter": "Filtrer par étiquette (optionnel)"
+                }
+            },
+            "switches": {
+                "title": "Groupe de switchs",
+                "description": "Une entité par pièce sélectionnée, et/ou une entité globale pour toute la maison.",
+                "data": {
+                    "all_areas": "Appliquer à toutes les pièces",
+                    "target_areas": "Sélectionnez les pièces",
+                    "create_global": "Créer aussi une entité globale Maison",
+                    "label_filter": "Filtrer par étiquette (optionnel)"
+                }
+            },
+            "aggregate": {
+                "title": "Agrégat de capteurs",
+                "description": "Combine plusieurs capteurs. Renseignez des mots-clés (id/nom/classe) ET/OU choisissez des entités précises. Une entité est créée par mot-clé ; en mode entités précises, une seule entité (donnez-lui un nom).",
+                "data": {
+                    "keywords": "Mots-clés séparés par des virgules (ex : temperature, humidite)",
+                    "entities": "Entités précises (au lieu des mots-clés)",
+                    "name": "Nom (mode entités précises)",
+                    "operation": "Opération",
+                    "label_filter": "Filtrer par étiquette (optionnel)",
+                    "precision": "Nombre de décimales",
+                    "min_valid": "Valeur minimale acceptée (vide = aucune)",
+                    "max_valid": "Valeur maximale acceptée (vide = aucune)",
+                    "outlier_mad": "Rejet des valeurs aberrantes — seuil MAD (ex : 3 ; vide = désactivé)",
+                    "offsets": "Offsets par capteur (une ligne, ex : sensor.temp_salon = -0.5)"
+                }
+            },
+            "difference": {
+                "title": "Différence (A − B)",
+                "description": "Calcule la différence entre deux entités numériques.",
+                "data": {
+                    "name": "Nom",
+                    "entity_a": "Entité A",
+                    "entity_b": "Entité B",
+                    "abs_value": "Valeur absolue |A − B|",
+                    "precision": "Nombre de décimales"
+                }
+            },
+            "derivative": {
+                "title": "Dérivée temporelle",
+                "description": "Variation d'une entité par unité de temps. Fenêtre de lissage en secondes (0 = entre les deux derniers points).",
+                "data": {
+                    "name": "Nom",
+                    "source": "Entité source",
+                    "unit_time": "Unité de temps",
+                    "time_window": "Fenêtre de lissage (secondes)",
+                    "precision": "Nombre de décimales"
+                }
+            },
+            "moving_average": {
+                "title": "Moyenne glissante",
+                "description": "Moyenne d'une entité sur une fenêtre de temps glissante (pondérée par la durée).",
+                "data": {
+                    "name": "Nom",
+                    "source": "Entité source",
+                    "window": "Fenêtre (secondes)",
+                    "precision": "Nombre de décimales",
+                    "min_valid": "Valeur minimale acceptée (vide = aucune)",
+                    "max_valid": "Valeur maximale acceptée (vide = aucune)",
+                    "max_step": "Saut maximal accepté entre deux mesures (vide = aucun)"
+                }
+            }
+        },
+        "abort": {
+            "already_configured": "Cet opérateur est déjà configuré"
+        }
+    },
+    "options": {
+        "step": {
+            "lights": {
+                "title": "Ajuster les réglages",
+                "data": {
+                    "all_areas": "Appliquer à toutes les pièces",
+                    "target_areas": "Sélectionnez les pièces",
+                    "create_global": "Créer aussi une entité globale Maison",
+                    "label_filter": "Filtrer par étiquette",
+                    "use_brightness": "Activer le contrôle de la luminosité",
+                    "use_color_temp": "Activer la température de couleur",
+                    "use_rgb_color": "Activer la couleur RGB"
+                }
+            },
+            "covers": {
+                "title": "Ajuster les réglages",
+                "data": {
+                    "all_areas": "Appliquer à toutes les pièces",
+                    "target_areas": "Sélectionnez les pièces",
+                    "create_global": "Créer aussi une entité globale Maison",
+                    "label_filter": "Filtrer par étiquette"
+                }
+            },
+            "switches": {
+                "title": "Ajuster les réglages",
+                "data": {
+                    "all_areas": "Appliquer à toutes les pièces",
+                    "target_areas": "Sélectionnez les pièces",
+                    "create_global": "Créer aussi une entité globale Maison",
+                    "label_filter": "Filtrer par étiquette"
+                }
+            },
+            "aggregate": {
+                "title": "Ajuster l'agrégat",
+                "data": {
+                    "keywords": "Mots-clés (ex : temperature, humidite)",
+                    "entities": "Entités précises",
+                    "name": "Nom (mode entités précises)",
+                    "operation": "Opération",
+                    "label_filter": "Filtrer par étiquette",
+                    "precision": "Nombre de décimales",
+                    "min_valid": "Valeur minimale acceptée (vide = aucune)",
+                    "max_valid": "Valeur maximale acceptée (vide = aucune)",
+                    "outlier_mad": "Rejet des valeurs aberrantes — seuil MAD",
+                    "offsets": "Offsets par capteur"
+                }
+            },
+            "difference": {
+                "title": "Ajuster la différence",
+                "data": {
+                    "name": "Nom",
+                    "entity_a": "Entité A",
+                    "entity_b": "Entité B",
+                    "abs_value": "Valeur absolue |A − B|",
+                    "precision": "Nombre de décimales"
+                }
+            },
+            "derivative": {
+                "title": "Ajuster la dérivée",
+                "data": {
+                    "name": "Nom",
+                    "source": "Entité source",
+                    "unit_time": "Unité de temps",
+                    "time_window": "Fenêtre de lissage (secondes)",
+                    "precision": "Nombre de décimales"
+                }
+            },
+            "moving_average": {
+                "title": "Ajuster la moyenne glissante",
+                "data": {
+                    "name": "Nom",
+                    "source": "Entité source",
+                    "window": "Fenêtre (secondes)",
+                    "precision": "Nombre de décimales",
+                    "min_valid": "Valeur minimale acceptée (vide = aucune)",
+                    "max_valid": "Valeur maximale acceptée (vide = aucune)",
+                    "max_step": "Saut maximal accepté entre deux mesures (vide = aucun)"
+                }
+            }
+        }
+    }
+}

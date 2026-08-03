@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2bb3ff"/>
+      <stop offset="1" stop-color="#0d5dbb"/>
+    </linearGradient>
+  </defs>
+  <!-- Fond -->
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+  <!-- Toit -->
+  <path d="M112 272 L256 136 L400 272" fill="none" stroke="#ffffff"
+        stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Murs -->
+  <path d="M164 260 L164 368 Q164 396 192 396 L320 396 Q348 396 348 368 L348 260"
+        fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round"/>
+  <!-- Réseau centralisé : hub relié aux nœuds des "pièces" -->
+  <g stroke="#ffffff" stroke-width="10" stroke-linecap="round">
+    <line x1="256" y1="304" x2="256" y2="222"/>
+    <line x1="256" y1="304" x2="198" y2="262"/>
+    <line x1="256" y1="304" x2="316" y2="268"/>
+    <line x1="256" y1="304" x2="206" y2="356"/>
+    <line x1="256" y1="304" x2="308" y2="352"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="256" cy="304" r="24"/>
+    <circle cx="256" cy="222" r="13"/>
+    <circle cx="198" cy="262" r="13"/>
+    <circle cx="316" cy="268" r="13"/>
+    <circle cx="206" cy="356" r="13"/>
+    <circle cx="308" cy="352" r="13"/>
+  </g>
+</svg>
